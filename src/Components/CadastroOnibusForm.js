@@ -17,10 +17,11 @@ function CadastroOnibusForm() {
   const [dataCompraSelecionada, setDataCompraSelecionada] = useState(null);
   const [mensagem, setMensagem] = useState('');
   const [mensagemCor, setMensagemCor] = useState('');
-
+/*
   const listaMarca = popularListaMarca();
   const listaModelos = popularListaModelo();
   const listModeloFiltrado = [];
+  */
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -131,11 +132,10 @@ function CadastroOnibusForm() {
                     <label htmlFor="modelo"className='label'>Modelo</label>
                       <input
                         type="text"
-                        id="modelo"
+                        id="Modelo"
                         value={modelo}
-                        onChange={(e) => setModelo(e.target.value)}
-                        onSelect={(e) => popularModelo(e.idMarca)}
-                        placeholder="Digite o Modelo"
+                        onChange={(e) => setModelo(e.target.value) }
+                        placeholder="Digite a Modelo"
                       />
                     </td>
 
@@ -198,14 +198,8 @@ function CadastroOnibusForm() {
                         dateFormat="dd/MM/yyyy"
                       />
                     </td>
-
-
                 </tr>
-                
-                  
-                  
-            
-              </tbody>
+                </tbody>
             </table>
           </fieldset>
         
@@ -213,17 +207,27 @@ function CadastroOnibusForm() {
         </form>
 
         <div className="button-wrapper">
-          <Button type="submit" variant="contained" color="primary" className="button">
-            Cadastrar
-          </Button>
-        </div>
+        <div className="button-wrapper">
+  <Button
+    type="button"
+    variant="contained"
+    color="primary"
+    className="button"
+    onClick={limparCampos} // Adiciona o evento onClick para chamar a função limparCampos
+  >
+    Cadastrar
+  </Button>
+</div>
+
+</div>
+
 
         {mensagem && <p className={`mensagem ${mensagemCor === 'error' ? 'error' : ''}`}>{mensagem}</p>}
       </div>
     </div>
   );
 }
-
+/*
 function popularListaMarca() {
   const lista = [
     {
@@ -391,5 +395,6 @@ function popularModelo(idMarca) {
   }
   this.listModeloFiltrado = lista;
 }
+*/
 
 export default CadastroOnibusForm;

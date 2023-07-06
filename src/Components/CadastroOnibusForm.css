@@ -8,15 +8,16 @@
   margin-top: 50px;
   border: none;
   border-radius: 5px;
-  box-shadow: 2px 2px 5px rgb(247, 244, 244);
+  box-shadow: none; /* Remove a sombra */
   float: right;
   margin-left: 200px;
-  margin: -508px 370px;
+  margin: -550px 370px;
   background-color: transparent;
   opacity: 0.8;
   filter: alpha(opacity=40);
   border-color: transparent;
 }
+
 
 
 .tituloImage {
@@ -83,7 +84,7 @@ form {
   background: #ffffff;
   padding: auto;
   border: none;
-  background-color: #f5f0f0;
+  background-color: #FFFFFF;
 }
 
 fieldset {
@@ -124,6 +125,7 @@ legend {
   flex-direction: row;
 }
 
+
 /* Adiciona uma classe "form-group" para estilizar os grupos de cada campo */
 .table-form .form-row .form-group {
   flex: 1;
@@ -135,14 +137,14 @@ legend {
 }
 
 .table-form input {
-  width: 700px; /* Altere o valor para o comprimento desejado */
+  width: 900px; /* Altere o valor para o comprimento desejado */
   height: 50px;
   border: 1px solid rgba(128, 128, 128, 0.425);
   border-radius: 10px;
   padding: 10px;
   background-color: #FFFFFF;
   color: black;
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 2px;
   margin-right: 30px;
 }
@@ -154,7 +156,7 @@ legend {
 
 .button-wrapper {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   margin-top: 10px;
 }
 
