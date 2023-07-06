@@ -80,45 +80,38 @@ function CadastroOnibusForm() {
 
             <table className="table-form">
               <tbody>
-                {/* linha1 */}
-                <div class="row">
-                  <tr>
-                    <td className="label label-left">
-                      <label htmlFor="renavan">Renavan:</label>
+                <tr>
+                  <td className="label label-left">
+                    
+                  </td>
+                  <td className="input-wrapper">
+                  <label htmlFor="renavan">Renavan</label>
+                    <input
+                      type="text"
+                      id="renavan"
+                      value={renavan}
+                      onChange={(e) => setRenavan(e.target.value)}
+                      placeholder="Digite o Renavan"
+                    />
+                  </td>
+                  <td className="label label-left">
+                    
+                  </td>
+                  <td className="input-wrapper">
+                  <label htmlFor="chassi">Chassi</label>
+                    <input
+                      type="text"
+                      id="chassi"
+                      value={chassi}
+                      onChange={(e) => setChassi(e.target.value)}
+                      placeholder="Digite o Chassi"
+                    />
+                  </td>
+                  <td className="label label-left">
+                    
                     </td>
                     <td className="input-wrapper">
-                      <input
-                        type="text"
-                        id="renavan"
-                        value={renavan}
-                        onChange={(e) => setRenavan(e.target.value)}
-                        placeholder="Digite o Renavan"
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="label label-left">
-                      <label htmlFor="chassi">Chassi:</label>
-                    </td>
-                    <td className="input-wrapper">
-                      <input
-                        type="text"
-                        id="chassi"
-                        value={chassi}
-                        onChange={(e) => setChassi(e.target.value)}
-                        placeholder="Digite o Chassi"
-                      />
-                    </td>
-                  </tr>
-                </div>
-
-                {/* linha2 */}
-                <div class="row">
-                  <tr>
-                    <td className="label label-left">
-                      <label htmlFor="marca">Marca:</label>
-                    </td>
-                    <td className="input-wrapper">
+                    <label htmlFor="marca">Marca</label>
                       <input
                         type="text"
                         id="marca"
@@ -127,12 +120,11 @@ function CadastroOnibusForm() {
                         placeholder="Digite a Marca"
                       />
                     </td>
-                  </tr>
-                  <tr>
                     <td className="label label-left">
-                      <label htmlFor="modelo">Modelo:</label>
+                    
                     </td>
                     <td className="input-wrapper">
+                    <label htmlFor="modelo">Modelo</label>
                       <input
                         type="text"
                         id="modelo"
@@ -141,63 +133,59 @@ function CadastroOnibusForm() {
                         placeholder="Digite o Modelo"
                       />
                     </td>
-                  </tr>
 
-                </div>
 
-                {/* linha3 */}
-                <div class="row">
-                  <tr>
-                    <td className="label label-left">
-                      <label htmlFor="anoFabricacao">Ano de Fabricação:</label>
-                    </td>
-                    <td className="input-wrapper">
-                      <input
-                        type="text"
-                        id="anoFabricacao"
-                        value={anoFabricacao}
-                        onChange={(e) => setAnoFabricacao(e.target.value)}
-                        placeholder="Digite o Ano de Fabricação"
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="label label-left">
-                      <label htmlFor="placa">Placa:</label>
-                    </td>
-                    <td className="input-wrapper">
-                      <input
-                        type="text"
-                        id="placa"
-                        value={placa}
-                        onChange={(e) => setPlaca(e.target.value)}
-                        placeholder="Digite a Placa"
-                      />
-                    </td>
-                  </tr>
-                </div>
+                </tr>
+                <tr>
+                  
+                  
+                </tr>
+                <tr>
+                  <td className="label label-left">
+                    
+                  </td>
+                  <td className="input-wrapper">
+                  <label htmlFor="anoFabricacao">Ano de Fabricação</label>
+                    <input
+                      type="text"
+                      id="anoFabricacao"
+                      value={anoFabricacao}
+                      onChange={(e) => setAnoFabricacao(e.target.value)}
+                      placeholder="Digite o Ano de Fabricação"
+                    />
+                  </td>
+                  <td className="label label-left">
+                    
+                  </td>
+                  <td className="input-wrapper">
+                  <label htmlFor="placa">Placa</label>
+                    <input
+                      type="text"
+                      id="placa"
+                      value={placa}
+                      onChange={(e) => setPlaca(e.target.value)}
+                      placeholder="Digite a Placa"
+                    />
+                  </td>
 
-                {/* linha4 */}
-                <div class="row">
-                  <tr>
-                    <td className="label label-left">
-                      <label htmlFor="quilometragem">Quilometragem:</label>
+                  <td className="label label-left">
+                    
+                  </td>
+                  <td className="input-wrapper">
+                  <label htmlFor="quilometragem">Quilometragem</label>
+                    <input
+                      type="text"
+                      id="quilometragem"
+                      value={quilometragem}
+                      onChange={(e) => setQuilometragem(e.target.value)}
+                      placeholder="Digite a Quilometragem"
+                    />
+                  </td>
+                  <td className="label label-left">
+                    
                     </td>
                     <td className="input-wrapper">
-                      <input
-                        type="text"
-                        id="quilometragem"
-                        value={quilometragem}
-                        onChange={(e) => setQuilometragem(e.target.value)}
-                        placeholder="Digite a Quilometragem"
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="label label-left">
-                      <label htmlFor="dataCompra">Data da Compra:</label>
-                    </td>
-                    <td className="input-wrapper">
+                    <label htmlFor="dataCompra">Data da Compra</label>
                       <DatePicker
                         id="dataCompra"
                         selected={dataCompraSelecionada}
@@ -206,8 +194,13 @@ function CadastroOnibusForm() {
                         dateFormat="dd/MM/yyyy"
                       />
                     </td>
-                  </tr>
-                </div>
+
+
+                </tr>
+                <tr>
+                  
+                  
+                </tr>
               </tbody>
             </table>
           </fieldset>
@@ -227,7 +220,6 @@ function CadastroOnibusForm() {
 }
 
 export default CadastroOnibusForm;
-
 
 
 
