@@ -85,7 +85,7 @@ function CadastroOnibusForm() {
                     
                   </td>
                   <td className="input-wrapper">
-                  <label htmlFor="renavan">Renavan</label>
+                  <label htmlFor="renavan"className='label'>Renavan</label>
                     <input
                       type="text"
                       id="renavan"
@@ -98,7 +98,7 @@ function CadastroOnibusForm() {
                     
                   </td>
                   <td className="input-wrapper">
-                  <label htmlFor="chassi">Chassi</label>
+                  <label htmlFor="chassi"className='label'>Chassi</label>
                     <input
                       type="text"
                       id="chassi"
@@ -111,7 +111,7 @@ function CadastroOnibusForm() {
                     
                     </td>
                     <td className="input-wrapper">
-                    <label htmlFor="marca">Marca</label>
+                    <label htmlFor="marca"className='label'>Marca</label>
                       <input
                         type="text"
                         id="marca"
@@ -124,7 +124,7 @@ function CadastroOnibusForm() {
                     
                     </td>
                     <td className="input-wrapper">
-                    <label htmlFor="modelo">Modelo</label>
+                    <label htmlFor="modelo"className='label'>Modelo</label>
                       <input
                         type="text"
                         id="modelo"
@@ -145,7 +145,7 @@ function CadastroOnibusForm() {
                     
                   </td>
                   <td className="input-wrapper">
-                  <label htmlFor="anoFabricacao">Ano de Fabricação</label>
+                  <label htmlFor="anoFabricacao" className='label'>Ano de Fabricação</label>
                     <input
                       type="text"
                       id="anoFabricacao"
@@ -158,7 +158,7 @@ function CadastroOnibusForm() {
                     
                   </td>
                   <td className="input-wrapper">
-                  <label htmlFor="placa">Placa</label>
+                  <label htmlFor="placa"className='label'>Placa</label>
                     <input
                       type="text"
                       id="placa"
@@ -172,7 +172,7 @@ function CadastroOnibusForm() {
                     
                   </td>
                   <td className="input-wrapper">
-                  <label htmlFor="quilometragem">Quilometragem</label>
+                  <label htmlFor="quilometragem"className='label'>Quilometragem</label>
                     <input
                       type="text"
                       id="quilometragem"
@@ -185,7 +185,7 @@ function CadastroOnibusForm() {
                     
                     </td>
                     <td className="input-wrapper">
-                    <label htmlFor="dataCompra">Data da Compra</label>
+                    <label htmlFor="dataCompra"className='label'>Data da Compra</label>
                       <DatePicker
                         id="dataCompra"
                         selected={dataCompraSelecionada}
@@ -197,10 +197,10 @@ function CadastroOnibusForm() {
 
 
                 </tr>
-                <tr>
+                
                   
                   
-                </tr>
+            
               </tbody>
             </table>
           </fieldset>

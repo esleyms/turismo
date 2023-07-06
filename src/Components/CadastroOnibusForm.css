@@ -57,7 +57,7 @@ body::before {
   background-color: #F2F2F2;
   font-size: 25px;
   margin-top: 50px;
-  padding-left: 50px;
+  padding-left: 30px;
   display: flex;
   align-items: center;
   border-left: 5px solid #016FA0; /* Adiciona uma borda esquerda */
@@ -74,14 +74,14 @@ body::before {
 }
 
 form {
-  width: 1000px;
+  width: auto;
   height: auto;
   margin: auto;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  padding: 1em;
+  padding: auto;
   border: none;
   background-color: #f5f0f0;
 }
@@ -99,12 +99,13 @@ legend {
 }
 
 .label {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   font-weight: bold;
-  color: #333333;
+  color: #474444;
   text-align: left; /* Alinha o texto à esquerda */
-  padding: 25px;
+  padding: 10px;
   margin-top: 10px; /* Adiciona uma margem superior de 10px */
+  padding-left: -100px; /* Ajusta o recuo à esquerda */
 }
 
 
@@ -134,15 +135,16 @@ legend {
 }
 
 .table-form input {
-  width: 500px; /* Altere o valor para o comprimento desejado */
-  height: 80px;
+  width: 700px; /* Altere o valor para o comprimento desejado */
+  height: 50px;
   border: 1px solid rgba(128, 128, 128, 0.425);
   border-radius: 50px;
-  padding: 30px;
+  padding: 10px;
   background-color: #FFFFFF;
   color: black;
   font-size: 18px;
-  margin-top: 25px;
+  margin-top: 2px;
+  margin-right: 30px;
 }
 
 
@@ -153,7 +155,7 @@ legend {
 .button-wrapper {
   display: flex;
   justify-content: flex-start;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .button {
@@ -162,11 +164,12 @@ legend {
   background-color: transparent;
   color: #007bff;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
   font-size: 14px;
   transition: color 0.3s ease;
   float: left;
+
 }
 
 .button:hover {
@@ -200,5 +203,7 @@ legend {
 }
 
 .label-left {
-  text-align: right;
+  text-align: left;
+  padding: 10px;
+  padding-left: 30px;
 }
