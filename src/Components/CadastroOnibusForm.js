@@ -18,8 +18,13 @@ function CadastroOnibusForm() {
   const [mensagem, setMensagem] = useState('');
   const [mensagemCor, setMensagemCor] = useState('');
 
+  const listaMarca = popularListaMarca();
+  const listaModelos = popularListaModelo();
+  const listModeloFiltrado = [];
+
   const handleSubmit = async (event) => {
     event.preventDefault();
+
 
     if (placa && quilometragem && anoFabricacao && chassi && modelo && renavan && marca && dataCompraSelecionada) {
       try {
@@ -82,10 +87,10 @@ function CadastroOnibusForm() {
               <tbody>
                 <tr>
                   <td className="label label-left">
-                    
+
                   </td>
                   <td className="input-wrapper">
-                  <label htmlFor="renavan"className='label'>Renavan</label>
+                  <label htmlFor="renavan"className='label'>Renavan *</label>
                     <input
                       type="text"
                       id="renavan"
@@ -95,10 +100,10 @@ function CadastroOnibusForm() {
                     />
                   </td>
                   <td className="label label-left">
-                    
+
                   </td>
                   <td className="input-wrapper">
-                  <label htmlFor="chassi"className='label'>Chassi</label>
+                  <label htmlFor="chassi"className='label'>Chassi *</label>
                     <input
                       type="text"
                       id="chassi"
@@ -108,15 +113,14 @@ function CadastroOnibusForm() {
                     />
                   </td>
                   <td className="label label-left">
-                    
                     </td>
                     <td className="input-wrapper">
-                    <label htmlFor="marca"className='label'>Marca</label>
+                    <label htmlFor="marca"className='label'>Marca *</label>
                       <input
                         type="text"
                         id="marca"
                         value={marca}
-                        onChange={(e) => setMarca(e.target.value)}
+                        onChange={(e) => setMarca(e.target.value) }
                         placeholder="Digite a Marca"
                       />
                     </td>
@@ -130,6 +134,7 @@ function CadastroOnibusForm() {
                         id="modelo"
                         value={modelo}
                         onChange={(e) => setModelo(e.target.value)}
+                        onSelect={(e) => popularModelo(e.idMarca)}
                         placeholder="Digite o Modelo"
                       />
                     </td>
@@ -137,18 +142,17 @@ function CadastroOnibusForm() {
 
                 </tr>
                 <tr>
-                  
-                  
                 </tr>
                 <tr>
                   <td className="label label-left">
                     
                   </td>
                   <td className="input-wrapper">
-                  <label htmlFor="anoFabricacao" className='label'>Ano de Fabricação</label>
+                  <label htmlFor="anoFabricacao" className='label'>Ano de Fabricação *</label>
                     <input
                       type="text"
                       id="anoFabricacao"
+                      maxLength={4}
                       value={anoFabricacao}
                       onChange={(e) => setAnoFabricacao(e.target.value)}
                       placeholder="Digite o Ano de Fabricação"
@@ -205,13 +209,14 @@ function CadastroOnibusForm() {
             </table>
           </fieldset>
         
-          <div className="button-wrapper">
-            <Button type="submit" variant="contained" color="primary" className="button">
-              Cadastrar
-            </Button>
-          </div>
         
         </form>
+
+        <div className="button-wrapper">
+          <Button type="submit" variant="contained" color="primary" className="button">
+            Cadastrar
+          </Button>
+        </div>
 
         {mensagem && <p className={`mensagem ${mensagemCor === 'error' ? 'error' : ''}`}>{mensagem}</p>}
       </div>
@@ -219,16 +224,172 @@ function CadastroOnibusForm() {
   );
 }
 
+function popularListaMarca() {
+  const lista = [
+    {
+      id: "1",
+      marca: "Mercedes-Benz",
+    },
+    {
+      id: "2",
+      marca: "Volvo",
+    },
+    {
+      id: "3",
+      marca: "MAN",
+    },
+    {
+      id: "4",
+      marca: "Scania",
+    },
+    {
+      id: "5",
+      marca: "Iveco",
+    },
+    {
+      id: "6",
+      marca: "Neoplan",
+    },
+    {
+      id: "7",
+      marca: "Marcopolo",
+    },
+    {
+      id: "8",
+      marca: "Van Hool",
+    },
+    {
+      id: "9",
+      marca: "DAF",
+    },
+    {
+      id: "10",
+      marca: "Solaris",
+    },
+    {
+      id: "11",
+      marca: "Setra",
+    },
+    {
+      id: "12",
+      marca: "Temsa",
+    },
+    {
+      id: "13",
+      marca: "Higer",
+    },
+    {
+      id: "14",
+      marca: "Yutong",
+    },
+    {
+      id: "15",
+      marca: "Zhongtong",
+    },
+    {
+      id: "16",
+      marca: "King Long",
+    },
+    {
+      id: "17",
+      marca: "Hyundai",
+    },
+    {
+      id: "18",
+      marca: "Tata Motors",
+    },
+    {
+      id: "19",
+      marca: "Ashok Leyland",
+    },
+    {
+      id: "20",
+      marca: "MCI (Motor Coach Industries)",
+    },
+    {
+      id: "21",
+      marca: "Blue Bird",
+    },
+    {
+      id: "22",
+      marca: "Prevost",
+    },
+    {
+      id: "23",
+      marca: "Gillig",
+    },
+    {
+      id: "24",
+      marca: "New Flyer",
+    },
+    {
+      id: "25",
+      marca: "Alexander Dennis",
+    },
+    {
+      id: "26",
+      marca: "Optare",
+    },
+    {
+      id: "27",
+      marca: "VDL",
+    },
+    {
+      id: "28",
+      marca: "Wrightbus",
+    },
+    {
+      id: "29",
+      marca: "BYD",
+    },
+    {
+      id: "30",
+      marca: "JAC Motors",
+    }
+  ];
+  return lista;
+}
+
+function popularListaModelo() {
+  const list = [
+    {
+      id: "1",
+      modelo: "O 500",
+      idMarca: "1"
+    },
+    {
+      id: "2",
+      modelo: "O 400",
+      idMarca: "1"
+    },
+    {
+      id: "3",
+      modelo: "O 371",
+      idMarca: "1"
+    },
+    {
+      id: "4",
+      modelo: "O 321",
+      idMarca: "1"
+    },
+    {
+      id: "5",
+      modelo: "O 302",
+      idMarca: "1"
+    },
+  ];
+  return list;
+}
+
+function popularModelo(idMarca) {
+  const lista = [];
+
+  for(const i = 0; i < this.listaModelos; i++) {
+    if(this.listaModelos[i].idMarca === idMarca) {
+      lista.push(lista[i]);
+    }
+  }
+  this.listModeloFiltrado = lista;
+}
+
 export default CadastroOnibusForm;
-
-
-
-
-
-
-
-
-
-
-
-

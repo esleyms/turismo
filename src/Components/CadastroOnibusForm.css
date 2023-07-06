@@ -11,7 +11,7 @@
   box-shadow: 2px 2px 5px rgb(247, 244, 244);
   float: right;
   margin-left: 200px;
-  margin: -20px 80px;
+  margin: -508px 370px;
   background-color: transparent;
   opacity: 0.8;
   filter: alpha(opacity=40);
@@ -138,7 +138,7 @@ legend {
   width: 700px; /* Altere o valor para o comprimento desejado */
   height: 50px;
   border: 1px solid rgba(128, 128, 128, 0.425);
-  border-radius: 50px;
+  border-radius: 10px;
   padding: 10px;
   background-color: #FFFFFF;
   color: black;
@@ -154,7 +154,7 @@ legend {
 
 .button-wrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: end;
   margin-top: 10px;
 }
 
@@ -190,7 +190,7 @@ legend {
 .input-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: normal;
 }
 
 .input-wrapper input {

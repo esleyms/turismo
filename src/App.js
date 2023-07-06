@@ -8,20 +8,9 @@ function App() {
     <div className="App">
       <CadastroOnibusForm />
       <img src={Logo} alt="Logo da Empresa" className="logo-img" />
-      
-      
-      
+
     </div>
   );
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
